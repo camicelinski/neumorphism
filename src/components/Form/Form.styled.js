@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-const StyledApp = styled.main`
+const StyledForm = styled.section`
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
   width: 100%;
 `
 
-export default StyledApp
+export default StyledForm

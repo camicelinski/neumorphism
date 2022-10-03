@@ -1,3 +1,5 @@
 import ResetStyle from './ResetStyle'
+import GlobalStyle from './GlobalStyle'
+import themeStyle from './themeStyle'
 
-export { ResetStyle }
+export { ResetStyle, GlobalStyle, themeStyle }
