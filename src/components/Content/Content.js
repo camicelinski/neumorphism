@@ -1,7 +1,7 @@
 import React from 'react'
 import StyledContent from './Content.styled'
 // import Welcome from '../Welcome'
-import { Step2 } from '../Steps'
+import { Step3 } from '../Steps'
 import Title from '../Title'
 
 const Content = () => {
@@ -18,7 +18,7 @@ const Content = () => {
       <Title>
         <h2>Step</h2>
       </Title>
-      <Step2 />
+      <Step3 />
     </StyledContent>
   )
 }
