@@ -2,7 +2,6 @@ import React from 'react'
 import fields from '../../data/step3Data'
 import Checkbox from '../Checkbox'
 import Dropdown from '../Dropdown'
-// import Input from '../Input'
 
 const Step3 = () => {
   const renderFields = () => fields.map(field => {

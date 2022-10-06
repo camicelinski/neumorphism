@@ -1,7 +1,7 @@
-import React /* , { useContext } */ from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { useToggle } from '../../hooks'
-// import formContext from '../../context/formContext'
+import formContext from '../../context/formContext'
 import StyledDropdown from './Dropdown.styled'
 import DropdownLabel from './DropdownLabel'
 import DropdownHeader from './DropdownHeader'
@@ -9,7 +9,7 @@ import DropdownList from './DropdownList'
 
 const Dropdown = ({ field: { name, label, items, order } }) => {
   const [isOpen, toggleDropdown] = useToggle()
-  /*
+
   const formHandler = useContext(formContext)
 
   const {
@@ -22,12 +22,12 @@ const Dropdown = ({ field: { name, label, items, order } }) => {
     }
     return isOpen ? 'select below' : 'click to choose'
   }
-*/
+
   return (
     <>
       <StyledDropdown
         isOpen={isOpen}
-        // isSelected={selectedValue !== ''}
+        isSelected={selectedValue !== ''}
       >
         <DropdownLabel>{label}</DropdownLabel>
         <div>
@@ -35,7 +35,7 @@ const Dropdown = ({ field: { name, label, items, order } }) => {
             toggleDropdown={toggleDropdown}
             isOpen={isOpen}
           >
-            DropdownHeader
+            {setDropdownHeader()}
           </DropdownHeader>
           <DropdownList
             name={name}
