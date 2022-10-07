@@ -2,6 +2,7 @@ import React from 'react'
 import fields from '../../data/step3Data'
 import Checkbox from '../Checkbox'
 import Dropdown from '../Dropdown'
+import Error from '../Error'
 
 const Step3 = () => {
   const renderFields = () => fields.map(field => {
@@ -26,6 +27,7 @@ const Step3 = () => {
   return (
     <div>
       {renderFields()}
+      <Error isCenter />
     </div>
   )
 }

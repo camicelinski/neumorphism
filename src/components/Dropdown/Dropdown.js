@@ -6,6 +6,7 @@ import StyledDropdown from './Dropdown.styled'
 import DropdownLabel from './DropdownLabel'
 import DropdownHeader from './DropdownHeader'
 import DropdownList from './DropdownList'
+import Error from '../Error'
 
 const Dropdown = ({ field: { name, label, items, order } }) => {
   const [isOpen, toggleDropdown] = useToggle()
@@ -46,6 +47,7 @@ const Dropdown = ({ field: { name, label, items, order } }) => {
           />
         </div>
       </StyledDropdown>
+      <Error>{formHandler.errors[name]}</Error>
     </>
   )
 }

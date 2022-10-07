@@ -4,13 +4,11 @@ const formFieldsStep3 = [
     label: 'literature category',
     type: 'dropdown',
     items: [
-      { value: 'arts', label: 'arts and photography' },
-      { value: 'biography', label: 'biographis and memoirs' },
-      { value: 'children', label: 'books for children' },
-      { value: 'history', label: 'history' },
+      { value: 'arts', label: 'arts' },
+      { value: 'biographies', label: 'biographies' },
       { value: 'poetry', label: 'poetry' },
       { value: 'fiction', label: 'fiction' },
-      { value: 'science', label: 'scientific/technical' }
+      { value: 'scientific/technical', label: 'scientific/technical' }
     ],
     order: 2
   },
@@ -19,9 +17,9 @@ const formFieldsStep3 = [
     label: 'size',
     type: 'dropdown',
     items: [
-      { value: 's', label: 'short (up to 100 pages)' },
-      { value: 'm', label: 'medium (100-300 pages)' },
-      { value: 'l', label: 'long (more than 300 pages)' }
+      { value: 'short', label: 'short (up to 100 pages)' },
+      { value: 'medium', label: 'medium (100-300 pages)' },
+      { value: 'long', label: 'long (more than 300 pages)' }
     ],
     order: 1
   },

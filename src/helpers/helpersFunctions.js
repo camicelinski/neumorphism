@@ -1,6 +1,12 @@
+import stepsData from '../data/stepsData'
 import formFieldsStep1 from '../data/step1Data'
 import formFieldsStep2 from '../data/step2Data'
 import formFieldsStep3 from '../data/step3Data'
+
+export const getStepsData = (step, dataToGet) => {
+  const stepData = stepsData[step]
+  return stepData[dataToGet]
+}
 
 export const convertArrToObj = (arr) => Object.assign({}, ...arr)
 

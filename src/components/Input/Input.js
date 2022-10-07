@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import formContext from '../../context/formContext'
 import PropTypes from 'prop-types'
 import StyledInput from './Input.styled'
+import Error from '../Error'
 
 const Input = (props) => {
   const formHandler = useContext(formContext)
@@ -31,6 +32,9 @@ const Input = (props) => {
       <StyledInput>
         {renderField()}
       </StyledInput>
+      <Error>
+        {formHandler.errors[name]}
+      </Error>
     </>
   )
 }

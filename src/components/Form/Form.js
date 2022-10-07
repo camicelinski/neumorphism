@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import { useForm } from '../../hooks'
 import formContext from '../../context/formContext'
 import StyledForm from './Form.styled'
+import Switcher from '../Switcher'
 import Content from '../Content'
 import Title from '../Title'
+import ProgressBar from '../ProgressBar'
 
-const Form = (props) => {
+const Form = ({ toggleTheme, isDarkMode }) => {
   const [step, setStep] = useState(0)
 
   const {
@@ -56,6 +59,11 @@ const Form = (props) => {
       }}
     >
       <StyledForm>
+        <Switcher
+          name={'themeSwitcher'}
+          isOn={isDarkMode}
+          handleChange={toggleTheme}
+        />
         <Title>
           <h1>find the perfect book</h1>
         </Title>
@@ -64,9 +72,15 @@ const Form = (props) => {
           handleStepChange={handleStepChange}
           handleSubmit={handleSubmit}
         />
+        <ProgressBar step={step} />
       </StyledForm>
     </Provider>
   )
+}
+
+Form.propTypes = {
+  toggleTheme: PropTypes.func,
+  isDarkMode: PropTypes.bool
 }
 
 export default Form

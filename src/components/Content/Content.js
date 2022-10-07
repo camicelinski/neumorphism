@@ -1,26 +1,45 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { getStepsData } from '../../helpers/helpersFunctions'
 import StyledContent from './Content.styled'
-// import Welcome from '../Welcome'
-import { Step3 } from '../Steps'
+import ContentActions from './ContentActions'
+import Welcome from '../Welcome'
+import { Step1, Step2, Step3 } from '../Steps'
+import Summary from '../Summary'
 import Title from '../Title'
 
-const Content = () => {
-  /* const ContentComponents = {
+const Content = ({ step, handleStepChange, handleSubmit }) => {
+  const ContentComponents = {
     0: <Welcome />,
     1: <Step1 />,
     2: <Step2 />,
     3: <Step3 />,
     4: <Summary />
-  } */
+  }
+
+  const renderContentStep = () => ContentComponents[step]
 
   return (
-    <StyledContent>
+    <StyledContent
+      noValidate
+      onSubmit={(e) => handleSubmit(e, step)}
+    >
       <Title>
-        <h2>Step</h2>
+        <h2>{getStepsData(step, 'title')}</h2>
       </Title>
-      <Step3 />
+      {renderContentStep()}
+      <ContentActions
+        step={step}
+        handleStepChange={handleStepChange}
+      />
     </StyledContent>
   )
+}
+
+Content.propTypes = {
+  step: PropTypes.number,
+  handleStepChange: PropTypes.func,
+  handleSubmit: PropTypes.func
 }
 
 export default Content
