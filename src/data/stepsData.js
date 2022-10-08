@@ -26,7 +26,7 @@ const stepsData = [
   },
   {
     name: 'Step2',
-    label: 'profile',
+    label: 'category',
     title: 'your profile',
     actions: [
       {

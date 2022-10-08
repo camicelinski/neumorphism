@@ -1,18 +1,20 @@
 import React from 'react'
-// import formContext from '../../context/formContext'
 import fields from '../../data/step2Data'
-import Input from '../Input'
+import Dropdown from '../Dropdown'
 import Error from '../Error'
 
 const Step2 = () => {
-  // const formHandler = useContext(formContext)
-
   const renderFields = () => fields.map(field => {
     return (
-      <Input
-        key={field.name}
-        field={field}
-      />
+      field.type === 'dropdown' ?
+          (
+            <Dropdown
+              key={field.name}
+              field={field}
+            />
+          )
+        :
+        null
     )
   })
 

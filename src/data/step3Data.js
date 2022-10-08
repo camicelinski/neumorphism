@@ -1,18 +1,5 @@
 const formFieldsStep3 = [
   {
-    name: 'category',
-    label: 'literature category',
-    type: 'dropdown',
-    items: [
-      { value: 'arts', label: 'arts' },
-      { value: 'biographies', label: 'biographies' },
-      { value: 'poetry', label: 'poetry' },
-      { value: 'fiction', label: 'fiction' },
-      { value: 'scientific/technical', label: 'scientific/technical' }
-    ],
-    order: 2
-  },
-  {
     name: 'size',
     label: 'size',
     type: 'dropdown',

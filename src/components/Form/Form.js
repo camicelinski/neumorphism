@@ -80,7 +80,8 @@ const Form = ({ toggleTheme, isDarkMode }) => {
 
 Form.propTypes = {
   toggleTheme: PropTypes.func,
-  isDarkMode: PropTypes.bool
+  isDarkMode: PropTypes.bool,
+  handleSubmit: PropTypes.func
 }
 
 export default Form

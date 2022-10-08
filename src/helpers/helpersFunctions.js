@@ -30,3 +30,23 @@ export const createInitStateObj = () => convertArrToObj(createStateData())
 export const getInputNames = (fields) => fields.map((field) => field.name)
 
 export const isObjectEmpty = (obj) => Object.keys(obj).length === 0
+
+const setItemData = (labelContent, valueContent) => ({
+  label: labelContent,
+  value: valueContent
+})
+
+export const prepareSummaryItemsList = (itemsData) => {
+  const {
+    title,
+    author
+  } = itemsData
+
+  const titleItem = setItemData('book', `${title}`)
+  const authorItem = setItemData('by', `${author}`)
+
+  return [
+    titleItem,
+    authorItem
+  ].filter((item) => item)
+}

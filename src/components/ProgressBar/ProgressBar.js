@@ -7,7 +7,7 @@ import ProgressBarItem from './ProgressBarItem'
 const ProgressBar = ({ step }) => {
   const progress = (100 / (stepsData.length - 2)) * (step - 1)
 
-  const renderProgressItem = () => {
+  const renderProgressItem = () =>
     stepsData.map((stepData, index) => {
       const { label } = stepData
       return label ?
@@ -23,7 +23,6 @@ const ProgressBar = ({ step }) => {
           )
         : null
     })
-  }
 
   return (
     <StyledProgressBar

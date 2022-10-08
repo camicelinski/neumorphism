@@ -1,18 +1,15 @@
 const formFieldsStep2 = [
   {
-    name: 'birthDate',
-    label: 'birth date',
-    type: 'date'
-  },
-  {
-    name: 'gender',
-    label: 'gender',
-    type: 'radio'
-  },
-  {
-    name: 'lastReading',
-    label: 'the last book you read',
-    type: 'text'
+    name: 'category',
+    label: 'literature category',
+    type: 'dropdown',
+    items: [
+      { value: 'arts', label: 'arts' },
+      { value: 'biographies', label: 'biographies' },
+      { value: 'poetry', label: 'poetry' },
+      { value: 'fiction', label: 'fiction' }
+    ],
+    order: 1
   }
 ]
 

@@ -1,10 +1,9 @@
 import {
   convertArrToObj,
-  // countHoursDifference,
-  // countTime,
-  getInputNames
-  // prepareSummaryItemsList
+  getInputNames,
+  prepareSummaryItemsList
 } from './helpersFunctions'
+import booksData from '../data/booksData'
 import formFieldsStep1 from '../data/step1Data'
 import formFieldsStep2 from '../data/step2Data'
 import formFieldsStep3 from '../data/step3Data'
@@ -20,6 +19,38 @@ const SummaryCreator = (dataToFilter) => {
       }
     })
     return convertArrToObj(enteredValuesList)
+  }
+
+  const getEdition = ({ newRelease }) => {
+    if (!newRelease) {
+      const edition = 'oldEditions'
+      return booksData[edition]
+    }
+    const edition = 'newReleases'
+    return booksData[edition]
+  }
+
+  const getCategory = ({ category }, booksList) => {
+    return booksList[category]
+  }
+
+  const getBookInfo = ({ size }, booksList) => {
+    return booksList[size]
+  }
+
+  const getNeededData = (enteredData) => {
+    const editionList = getEdition(enteredData)
+    const categoryList = getCategory(enteredData, editionList)
+
+    const { title, author } = getBookInfo(enteredData, categoryList)
+    const { name, lastName, email, category, size } = enteredData
+
+    const summaryItemsList = prepareSummaryItemsList({
+      title,
+      author
+    })
+
+    return { name, lastName, email, category, size, summaryItemsList }
   }
 
   const prepareDataToShow = () => {
