@@ -2,7 +2,10 @@ const formFieldsStep1 = [
   {
     name: 'name',
     label: 'name',
-    type: 'text'
+    type: 'text',
+    regExp: /^[a-zA-Z]{3,}(?:(-| )[a-zA-Z]+){0,2}$/,
+    err: 'min. 3 letters',
+    required: true
   },
   {
     name: 'lastName',

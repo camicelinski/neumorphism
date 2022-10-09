@@ -19,7 +19,6 @@ const Form = ({ toggleTheme, isDarkMode }) => {
     handleCheckboxChange,
     validateFieldOnBlur,
     validateStepData,
-    // dateErr,
     removeFieldError
   } = useForm()
 

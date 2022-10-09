@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import StyledProgressBarItem from './ProgressBar.styled'
+import StyledProgressBarItem from './ProgressBarItem.styled'
 
 const ProgressBarItem = ({ children, txt, step, num }) => {
   const isComplete = num < step

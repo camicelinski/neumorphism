@@ -4,8 +4,8 @@ import Dropdown from '../Dropdown'
 import Error from '../Error'
 
 const Step2 = () => {
-  const renderFields = () => fields.map(field => {
-    return (
+  const renderFields = () =>
+    fields.map(field =>
       field.type === 'dropdown' ?
           (
             <Dropdown
@@ -16,7 +16,6 @@ const Step2 = () => {
         :
         null
     )
-  })
 
   return (
     <div>

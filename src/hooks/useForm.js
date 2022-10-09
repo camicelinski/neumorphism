@@ -15,7 +15,6 @@ import formFieldsStep3 from '../data/step3Data'
 function useForm () {
   const [formState, dispatch] = useReducer(formReducer, createInitStateObj())
   const [errors, setErrors] = useState({})
-  // const [dateErr, setDateErr] = useState(false)
   const validator = new DataValidator()
 
   const stepsData = {
@@ -106,7 +105,6 @@ function useForm () {
     handleCheckboxChange,
     validateFieldOnBlur,
     validateStepData,
-    // dateErr,
     removeFieldError
   }
 }
