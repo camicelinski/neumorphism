@@ -1,7 +1,7 @@
 const stepsData = [
   {
     name: 'Welcome',
-    title: 'book inquiry',
+    title: 'find your next reading',
     actions: [
       {
         txt: 'start',
@@ -12,7 +12,7 @@ const stepsData = [
   {
     name: 'Step1',
     label: 'personal',
-    title: 'your data',
+    title: 'enter your data',
     actions: [
       {
         txt: 'back',
@@ -27,7 +27,7 @@ const stepsData = [
   {
     name: 'Step2',
     label: 'category',
-    title: 'your profile',
+    title: 'choose a category',
     actions: [
       {
         txt: 'back',
@@ -42,7 +42,7 @@ const stepsData = [
   {
     name: 'Step3',
     label: 'preferences',
-    title: 'your preferences',
+    title: 'set your preferences',
     actions: [
       {
         txt: 'back',
@@ -56,8 +56,8 @@ const stepsData = [
   },
   {
     name: 'Success',
-    label: 'summary',
-    title: 'inquiry summary'
+    label: 'results',
+    title: 'your next reading'
   }
 ]
 

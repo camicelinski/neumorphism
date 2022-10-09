@@ -5,7 +5,7 @@ const StyledInput = styled.div`
   position: relative;
 
   :not(:first-child) {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
   }
 
   input {
@@ -31,20 +31,6 @@ const StyledInput = styled.div`
       font-size: 0.9rem;
       transform: translateY(-32px);
     }
-  }
-
-  input[type='time'],
-  input[type='date'] {
-    text-align: right;
-  }
-  
-  input[type='time']::-webkit-calendar-picker-indicator,
-  input[type='date']::-webkit-calendar-picker-indicator {
-    cursor: pointer;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    width: 100%;
   }
   
   label {

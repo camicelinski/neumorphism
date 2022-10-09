@@ -15,8 +15,8 @@ const StyledTitle = styled.header`
     transition: text-shadow var(--transition-style), color var(--transition-style);
   }
 
-  h2 {
-    font-size: 1.4rem;
+  h2 {    
+    font-size: 1.2rem;
     padding-bottom: 1rem;
     transition: color var(--transition-style);
   }

@@ -1,30 +1,27 @@
 import React, { useContext } from 'react'
 import formContext from '../../context/formContext'
 import SummaryCreator from '../../helpers/SummaryCreator'
-import SummaryItem from './SummaryItem'
 import StyledSummary from './Summary.styled'
 
 const Summary = () => {
   const formHandler = useContext(formContext)
 
-  const renderSummaryItems = (items) =>
-    items.map((item) => (
-      <SummaryItem
-        item={item}
-        key={item.label}
-      />
-    ))
-
   const renderSummary = () => {
-    const { name, email, summaryItemsList } = SummaryCreator(formHandler.formState)
+    const { name, lastName, email, title, author } = SummaryCreator(formHandler.formState)
 
     return (
       <StyledSummary>
+        <div>
+          <h3>{title}</h3>
+          <p>by <span>{author}</span></p>
+        </div>
         <p>
-          <span>{name}</span>, you will find your answer below. We sent a copy also to your email{' '}
+          Dear<span>{` ${name} ${lastName}`}</span>, we wish you a great reading!
+        </p>
+        <p>
+          We sent a copy of the results also to your email{' '}
           <span>{email}</span>.
         </p>
-        <ul>{renderSummaryItems(summaryItemsList)}</ul>
       </StyledSummary>
     )
   }

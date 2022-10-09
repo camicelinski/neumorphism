@@ -11,8 +11,9 @@ const StyledProgressBar = styled.footer`
   ul {
     display: flex;
     justify-content: space-between;
-    margin: 2rem auto 1.5rem;
+    margin: 1.5rem auto;
     position: relative;
+    max-width: 450px;
     width: 90%;
 
     ::before,

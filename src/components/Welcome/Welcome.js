@@ -5,13 +5,19 @@ const Welcome = () => {
   return (
     <StyledWelcome>
       <p>
-        To find out the perfect book for you, please <span>complete a short form.</span>
+        Are you unsure about which book to read next?
       </p>
       <p>
-        You are only <span>3 steps</span> away from finding your next reading.
+        Our app will help you to find the perfect title for your next reading.
       </p>
       <p>
-        Click on the button below to <span>get started!</span>
+        To find it out, please <span>complete a short form.</span>
+      </p>
+      <p>
+        You are only <span>3 steps</span> away from finding the perfect book.
+      </p>
+      <p>
+        Click on the button below to get started!
       </p>
     </StyledWelcome>
   )

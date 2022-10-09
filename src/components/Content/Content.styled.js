@@ -7,9 +7,9 @@ const StyledContent = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 600px;
-  min-height: 540px;
-  padding: 1.5rem;
+  max-width: 450px;
+  min-height: 450px;
+  padding: 1.25rem;
   transition: box-shadow var(--transition-style);
   width: 90%;
   

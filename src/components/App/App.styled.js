@@ -6,6 +6,7 @@ const StyledApp = styled.main`
   justify-content: center;
   min-height: 100vh;
   width: 100%;
+  padding: 15px;
 `
 
 export default StyledApp

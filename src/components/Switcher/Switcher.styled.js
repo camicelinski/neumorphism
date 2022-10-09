@@ -10,7 +10,6 @@ const themeSwitcherStyles = css`
 `
 
 const themeSwitcherLabelStyles = css`
-  background: var(--text-primary);
   box-shadow: -4px 4px 15px inset var(--color-shadow-theme-switcher);
   
   ::before,

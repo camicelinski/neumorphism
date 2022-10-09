@@ -15,7 +15,7 @@ const StyledProgressBarItem = styled.li`
   border: none;
   color: ${({ isActive, isComplete }) => isActive || isComplete ? 'var(--text-highlight)' : 'var(--text-user)'};
   display: flex;
-  font-size: ${({ isComplete }) => (isComplete ? '1.4rem' : '1rem')};
+  font-size: ${({ isComplete }) => (isComplete ? '1rem' : '0.8rem')};
   font-weight: ${({ isActive }) => (isActive ? '700' : '400')};
   height: 40px;
   justify-content: center;
@@ -27,8 +27,8 @@ const StyledProgressBarItem = styled.li`
   :after {
     color: ${({ isActive }) => (isActive ? 'var(--text-highlight)' : 'var(--text-user)')};
     content: '${({ txt }) => txt}';
-    filter: ${({ isComplete }) => (isComplete ? 'blur(1.5px)' : 'none')};
-    font-size: 1rem;
+    filter: ${({ isComplete }) => (isComplete ? 'blur(0.75px)' : 'none')};
+    font-size: 0.9rem;
     font-weight: ${({ isActive }) => (isActive ? '700' : '400')};
     position: absolute;
     text-align: center;

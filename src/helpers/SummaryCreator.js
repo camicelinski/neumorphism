@@ -1,7 +1,6 @@
 import {
   convertArrToObj,
-  getInputNames,
-  prepareSummaryItemsList
+  getInputNames
 } from './helpersFunctions'
 import booksData from '../data/booksData'
 import formFieldsStep1 from '../data/step1Data'
@@ -45,12 +44,7 @@ const SummaryCreator = (dataToFilter) => {
     const { title, author } = getBookInfo(enteredData, categoryList)
     const { name, lastName, email, category, size } = enteredData
 
-    const summaryItemsList = prepareSummaryItemsList({
-      title,
-      author
-    })
-
-    return { name, lastName, email, category, size, summaryItemsList }
+    return { name, lastName, email, category, size, title, author }
   }
 
   const prepareDataToShow = () => {
