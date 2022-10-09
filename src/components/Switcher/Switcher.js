@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 import StyledSwitcher from './Switcher.styled'
 
 const Switcher = ({ name, isOn, handleChange }) => (
-  <StyledSwitcher>
+  <StyledSwitcher
+    isOn={isOn}
+    name={name}
+  >
     <input
       type={'checkbox'}
       id={name}
